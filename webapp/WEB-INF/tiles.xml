@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- MAIN LAYOUT -->
+    <definition name="layout" template="/WEB-INF/view/layout/mainLayout.jsp">
+        <put-attribute name="title" value="HDDT" />
+        <put-attribute name="headerLayout" value="/WEB-INF/view/layout/headerLayout.jsp" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/layout/pageContent.jsp" />
+        <put-attribute name="footerLayout" value="/WEB-INF/view/layout/footerLayout.jsp" />
+    </definition>
+    
+    <!-- POPUP LAYOUT -->
+    <definition name="layoutPopup" template="/WEB-INF/view/layout/popupLayout.jsp">
+        <put-attribute name="title" value="HDDT" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/layout/pageContent.jsp" />
+    </definition>
+    
+    <definition name="login" template="/WEB-INF/view/login.jsp"/>
+    <definition name="logoff" template="/WEB-INF/view/logoff.jsp"/>
+    
+    <definition name="layoutWithBreadcrumb" extends="layout">
+    	<put-attribute name="menuNavigator" value="/WEB-INF/view/navigator/breadcrumb.jsp"/>
+    </definition>
+    <!-- / MAIN LAYOUT -->
+    
+    <!-- Single template -->
+	<definition name="listCategoryDistrict" template="/WEB-INF/view/admin/listCategoryDistrict.jsp" />
+	<definition name="access.denied" template="/WEB-INF/view/tracuu/forbiden.html"></definition>
+	<definition name="download.certified.invoice" template="/WEB-INF/view/tracuu/certifiedInvoiceView.jsp"></definition>
+	<definition name="error.certified.invoice" template="/WEB-INF/view/tracuu/errorCertifiedInvoiceView.jsp"></definition>
+	
+	<definition name="viewUserPopUp" template="/WEB-INF/view/admin/userPopUpView.jsp" />
+    <!-- /Single template -->
+    
+    <!-- Change list category -->
+    <definition name="changeCity" extends="layoutWithBreadcrumb">
+    	<put-attribute name="title" value="Change City" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/admin/changeCity.jsp" />
+    </definition>
+    <!-- /Change list category -->
+    
+    <definition name="home" extends="layoutWithBreadcrumb">
+        <put-attribute name="title" value="Hệ thống quản lý hóa đơn" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/home.jsp" />
+    </definition>
+    
+    <!-- <definition name="hddtList" extends="layoutWithBreadcrumb">
+        <put-attribute name="title" value="HDDT Management" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/project/hddt_view.jsp" />
+    </definition> -->
+    
+    <!-- Invoice template -->
+    <definition name="search.invoice" extends="layoutWithBreadcrumb">
+        <put-attribute name="title" value="Tra cứu hóa đơn" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/tracuu/searchInvoice.jsp" />
+    </definition>
+    
+    <definition name="login" extends="layoutWithBreadcrumb">
+        <put-attribute name="title" value="Đăng nhập" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/login.jsp" />
+    </definition>
+    <!-- Invoice template -->
+    
+    <definition name="hoadondientu_view" extends="layoutWithBreadcrumb">
+        <put-attribute name="title" value="Quản lý hóa đơn" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/invoice/invoiceView.jsp" />
+    </definition>
+    <definition name="importFileExcelSearch" extends="layoutWithBreadcrumb">
+        <put-attribute name="title" value="Tìm kiếm danh sách hóa đơn từ tập tin mẫu - Excel" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/invoice/importFileExcelSearch.jsp" />
+    </definition>
+    
+    <!-- admin -->
+     <!-- <definition name="adminList" extends="layoutWithBreadcrumb">
+        <put-attribute name="title" value="Administration" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/admin/adminList.jsp" />
+    </definition> -->
+     <definition name="viewUser" extends="layoutWithBreadcrumb">
+    	<put-attribute name="title" value="Chi tiết người dùng" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/admin/viewUser.jsp" />
+    </definition>
+     
+      <definition name="danhsachnguoidung" extends="layoutWithBreadcrumb">
+        <put-attribute name="title" value="Danh sách người dùng" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/admin/danhsachnguoidung.jsp" />
+    </definition>
+    
+    <definition name="createNewUser" extends="layoutWithBreadcrumb">
+    	<put-attribute name="title" value="Tạo mới người dùng" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/admin/createUser.jsp" />
+    </definition>
+    
+    <definition name="editUser" extends="layoutWithBreadcrumb">
+    	<put-attribute name="title" value="Cập nhật thông tin người dùng" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/admin/editUser.jsp" />
+    </definition>
+    
+    <definition name="changeCity" extends="layoutWithBreadcrumb">
+    	<put-attribute name="title" value="Thay đổi Tỉnh - Thành Phố" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/admin/changeCity.jsp" />
+    </definition>
+      
+      <definition name="error" extends="layoutWithBreadcrumb">
+        <put-attribute name="title" value="Giới hạn quyền người dùng" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/admin/error.jsp" />
+    </definition>
+    
+    <definition name="changePass" extends="layoutWithBreadcrumb">
+    	<put-attribute name="title" value="Thay đổi mật khẩu" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/admin/changePass.jsp" />
+    </definition>
+    
+    <!-- Report -->
+    <definition name="bangKeBanRa" extends="layoutWithBreadcrumb">
+    	<put-attribute name="title" value="Bảng kê mua vào bán ra" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/report/bangkebanra.jsp" />
+    </definition>
+    
+    <definition name="baoCaoBanHang" extends="layoutWithBreadcrumb">
+    	<put-attribute name="title" value="Báo cáo bán hàng" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/report/baocaobanhang.jsp" />
+    </definition>
+    
+     <definition name="reportUseOfInvoices" extends="layoutWithBreadcrumb">
+    	<put-attribute name="title" value="Báo cáo tình hình sử dụng hóa đơn" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/report/reportUseOfInvoices.jsp" />
+    </definition>
+    <definition name="reportTongHop" extends="layoutWithBreadcrumb">
+    	<put-attribute name="title" value="Xuất báo cáo tổng họp" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/report/bangkebanratonghop.jsp" />
+    </definition>
+
+    <definition name="popupReportPhatHanhTongHop" extends="layoutPopup">
+    	<put-attribute name="title" value="Xuất báo cáo theo thông báo phát hành hóa đơn" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/report/popupphathanhtonghop.jsp" />
+    </definition>
+    <!-- <definition name="popupReportPhatHanhTongHop" template="/WEB-INF/view/report/popupphathanhtonghop.jsp"></definition> -->
+     
+    <definition name="reportThongBaoPhatHanh" extends="layoutWithBreadcrumb">
+    	<put-attribute name="title" value="Xuất báo cáo theo thông báo phát hành hóa đơn" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/report/thongbaophathanh.jsp" />
+    </definition>
+    
+
+    <!-- /Report -->
+    
+    <definition name="lockMst" extends="layoutWithBreadcrumb">
+        <put-attribute name="title" value="Khóa mã số thuế" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/admin/lockMst.jsp" />
+    </definition>
+    
+    <definition name="createLockMst" extends="layoutWithBreadcrumb">
+        <put-attribute name="title" value="Khóa mã số thuế" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/admin/createLockMst.jsp" />
+    </definition>
+    
+    <definition name="editLockMst" extends="layoutWithBreadcrumb">
+        <put-attribute name="title" value="Khóa mã số thuế" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/admin/editLockMst.jsp" />
+    </definition>
+    
+    <!-- Template Call Services TS24ID -->
+    <definition name="loginTs24Id" extends="layoutWithBreadcrumb">
+        <put-attribute name="title" value="Đăng nhập ts24 id" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/admincallservices/loginTS24ID.jsp" />
+    </definition>
+    <definition name="profileTs24Id" extends="layoutWithBreadcrumb">
+        <put-attribute name="title" value="Thông tin cá nhân" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/admincallservices/profileTS24ID.jsp" />
+    </definition>
+    <definition name="createAccountTs24Id" extends="layoutWithBreadcrumb">
+        <put-attribute name="title" value="Tạo tài khoản" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/admincallservices/createAccountTS24ID.jsp" />
+    </definition>
+    
+    <definition name="hoadondientu_ts24id_view" extends="layoutWithBreadcrumb">
+        <put-attribute name="title" value="Quản lý hóa đơn" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/admincallservices/invoiceView.jsp" />
+    </definition>
+    
+    <definition name="changeInfoAccountTs24Id" extends="layoutWithBreadcrumb">
+        <put-attribute name="title" value="Thay đổi thông tin cá nhân" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/admincallservices/changeInfoAccountTS24ID.jsp" />
+    </definition>
+    <!-- /Template Call Services TS24ID -->
+    
+    
+</tiles-definitions>

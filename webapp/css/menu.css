@@ -1,0 +1,224 @@
+/* 
+    This file contains menu-related styling for the "ts24portal" skin. 
+    Both single- and multi-level menus make extensive use of the :hover 
+    pseudo-class.
+
+    Multilevel menus make extensive use of descendant and child selectors, 
+    as well as the the :hover pseudo-class to control visibility, positioning
+    and the form of menu items in various menu levels.
+    
+    Note: console does not make use of multi-level menus so the related styles
+    are untested.
+*/
+
+.ts24-menu, .menu-level1, .menu-level2 {
+
+	
+	
+	 background-color: #B8B8B8;
+    height: 1%;
+    margin-top: 3px;
+  /*  padding-bottom: 4px;*/
+    padding-right: 2px;
+    padding-top: 4px;
+    white-space: nowrap;
+}
+
+.menu-level1 {
+    border-top: 2px solid #DDDDDD;
+}
+
+.menu-level2 {
+    border-top: 2px solid #DDDDDD;
+}
+
+.ts24-menu img {
+    border: 0;
+}
+
+.menu-wrapper {
+    float: left;
+    width: 100%;
+}
+
+.menu-wrapper ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-wrapper li {
+    float: left;
+    margin: 0;
+    margin-top: 5px;
+    padding: 0;
+   /* border-bottom: 1px solid #DDDDDD;*/
+    list-style-type: none;
+    list-style-image: none;
+    min-width:60px;
+    text-align:center;
+}
+
+.menu-wrapper a, .menu-wrapper div {
+    display: block;
+    background: url("../images/tab_right.gif") no-repeat right top;
+}
+
+.menu-wrapper a span.tab, .menu-wrapper div span.tab {
+    display: block;
+    background: url("../images/tab_left.gif") no-repeat left top;
+    padding: 6px 8px 2px 8px;
+    color: #DDDDDD;
+    font-weight: bold;
+}
+
+.menu-wrapper li.ts24-menu-active div, .menu-wrapper li.ts24-menu-active:hover div {
+   /* float: left;
+    background-position: right -300px;
+    border-bottom-color: #B8B8B8;*/
+	
+	background: none repeat scroll 0 0 #FFFFFF;   
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+	min-width:60px;
+	text-align:center;
+	position:relative;
+	z-index:1;
+	-webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-box-shadow: 1px -3px 3px  #616161;
+    -moz-box-shadow: 1px -3px 3px  #616161;
+    box-shadow:1px -3px 3px  #616161;
+    behavior: url('../css/PIE.htc'); 
+}
+
+.menu-wrapper li.ts24-menu-active div span.tab {
+/*    background-position: left -300px;
+    color: #0066CC;*/
+	
+	background: none repeat scroll 0 0 transparent;
+    color: #0066CC;
+}
+
+.menu-wrapper a:hover, .menu-wrapper a:hover span.tab {
+    background-position: right -150px;
+    color: #FFFFFF;
+	text-decoration:none;
+}
+
+.menu-wrapper a:hover span.tab {
+    background-position: left -150px;
+}
+
+.menu-wrapper a span.tab {
+    text-decoration: none;
+}
+
+/* styles for multilevel menus */
+
+.ts24-menu-menu-panel ul li:hover > ul
+{
+    display: block;
+}
+
+.ts24-menu-menu-panel ul ul
+{
+    border-width: 1px;
+    border-style: solid;
+    display: none;
+    position: absolute;
+    z-index: 100;
+    left: -1px;
+    top: 90%;
+}
+
+.ts24-menu-menu-panel ul ul li
+{
+    display: block;
+}
+
+.ts24-menu-menu-panel ul ul ul
+{
+    top: -1px;
+    left: 90%;
+}
+
+/* styles for image rolloves (page images) */
+
+.ts24-menu-menu-panel ul li:hover > img.ts24-image-rollover,
+.ts24-menu-menu-panel ul li:hover > a > img.ts24-image-rollover
+{
+    display: inline;
+}
+
+.ts24-menu-menu-panel ul li:hover > img.ts24-image-nonrollover,
+.ts24-menu-menu-panel ul li:hover > a > img.ts24-image-nonrollover
+{
+    display: none;
+}
+
+
+
+/*-------------- ---------------------------- tool bar style --------------------*/
+
+#toolbar{
+	background: none repeat scroll 0 0 #EDEDED;
+    border: 1px dashed #CCCCCC;
+  /*  height: 35px;*/
+    margin: 5px;	
+	}
+#toolbar a{
+		/*float:right;
+		margin-top:5px;
+		margin-right:7px;*/
+		cursor: pointer;
+		}
+#toolbar a:hover{
+	text-decoration:none;
+	background:none;
+	color:#09f;
+	}
+	
+		
+.buttonBar a:hover{
+	text-decoration:none;
+	/*color:#09F;	*/
+	}
+	
+.datatable a:hover{
+	text-decoration:none;
+	background:none;
+	color:#09f;
+	}
+	
+#ts24-header-menu a:hover{
+	text-decoration:none;
+	background:none;
+	color:#09f;
+	}	
+
+	
+.datatable tr:hover{
+	background:#CFF;	
+	}	
+.Clearfix:after
+{
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.col-divided-2{
+	width: 40%;
+}
+.col-divided-3{
+	width: 20%;
+}
+.f-left{
+	float: left;
+}
+.f-right{
+	float: right;
+}

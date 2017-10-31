@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2013 sp1 (http://www.altova.com) by ﻿Trọng Lú (VN) -->
+<Records>
+	<Record>
+		<MaToKhai>01GTKT_1</MaToKhai>
+		<MaPhuLuc>
+    </MaPhuLuc>
+		<MaDinhDanh>01GTKT_1</MaDinhDanh>
+		<TenToKhai>Hoa don GTGT - In A4</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>01GTKT_A4.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>01GTKT_41</MaToKhai>
+		<MaDinhDanh>01GTKT_41</MaDinhDanh>
+		<TenToKhai>Hoa don GTGT - In A4 có Mã nhận hóa đơn</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>01GTKT_A4MN.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>01GTKT_42</MaToKhai>
+		<MaDinhDanh>01GTKT_42</MaDinhDanh>
+		<TenToKhai>Hoa don GTGT - In A4 VILC_M1</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>01GTKT_A4_VILC_M1.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>01GTKT_43</MaToKhai>
+		<MaDinhDanh>01GTKT_43</MaDinhDanh>
+		<TenToKhai>Hoa don GTGT - In A4 VILC_M2</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>01GTKT_A4_VILC_M2.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>01GTKT_44</MaToKhai>
+		<MaDinhDanh>01GTKT_44</MaDinhDanh>
+		<TenToKhai>Hoa don GTGT - In A4 Lotte_M1</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>01GTKT_A4_Lotte_M1.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>01GTKT_45</MaToKhai>
+		<MaDinhDanh>01GTKT_45</MaDinhDanh>
+		<TenToKhai>Hoa don GTGT - In A4 McDonal_M1</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>01GTKT_A4_McDonal_M1.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>01GTKT_46</MaToKhai>
+		<MaDinhDanh>01GTKT_46</MaDinhDanh>
+		<TenToKhai>Hoa don GTGT - A4 Tiếng Việt-Anh</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>01GTKT_A4EV.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record/>
+	<Record>
+		<MaToKhai>01GTKT_47</MaToKhai>
+		<MaDinhDanh>01GTKT_47</MaDinhDanh>
+		<TenToKhai>Hoa don GTGT - A4 Elite</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>01GTKT_A4Elite.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+  <Record>
+    <MaToKhai>01GTKT_48</MaToKhai>
+    <MaDinhDanh>01GTKT_48</MaDinhDanh>
+    <TenToKhai>Hoa don GTGT - A4 Tiếng Việt-Anh</TenToKhai>
+    <ElementName>CTieuTKhaiChinh</ElementName>
+    <StyleSheet>01GTKT_A4EV2.xsl</StyleSheet>
+    <Version>100</Version>
+  </Record>
+  <Record>
+    <MaToKhai>01GTKT_49</MaToKhai>
+    <MaDinhDanh>01GTKT_49</MaDinhDanh>
+    <TenToKhai>Hoa don GTGT - A4 Tiếng Việt-Anh</TenToKhai>
+    <ElementName>CTieuTKhaiChinh</ElementName>
+    <StyleSheet>01GTKT_A4EV3.xsl</StyleSheet>
+    <Version>100</Version>
+  </Record>
+  <Record/>
+	<Record>
+		<MaToKhai>01GTKT_50</MaToKhai>
+		<MaDinhDanh>01GTKT_50</MaDinhDanh>
+		<TenToKhai>Hoa don GTGT- In A5</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>01GTKT_A5.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>01GTKT_51</MaToKhai>
+		<MaDinhDanh>01GTKT_51</MaDinhDanh>
+		<TenToKhai>Hoa don GTGT- In A5 có Mã nhận hóa đơn</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>01GTKT_A5MN.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>01GTKT_80</MaToKhai>
+		<MaDinhDanh>01GTKT_80</MaDinhDanh>
+		<TenToKhai>Hoa don GTGT- In kim kho 80</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>01GTKT_B80.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>01GTKT_58</MaToKhai>
+		<MaDinhDanh>01GTKT_58</MaDinhDanh>
+		<TenToKhai>Hoa don GTGT- In kim kho 58</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>01GTKT_B58.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>02GTTT_1</MaToKhai>
+		<MaPhuLuc>
+    </MaPhuLuc>
+		<MaDinhDanh>02GTTT_1</MaDinhDanh>
+		<TenToKhai>Hoa don ban hang A4</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>02GTTT_A4.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>02GTTT_41</MaToKhai>
+		<MaPhuLuc>
+    </MaPhuLuc>
+		<MaDinhDanh>02GTTT_41</MaDinhDanh>
+		<TenToKhai>Hoa don ban hang A4 có Mã nhận hóa đơn</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>02GTTT_A4MN.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>02GTTT_50</MaToKhai>
+		<MaPhuLuc>
+    </MaPhuLuc>
+		<MaDinhDanh>02GTTT_50</MaDinhDanh>
+		<TenToKhai>Hoa don ban hang A5</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>02GTTT_A5.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>02GTTT_51</MaToKhai>
+		<MaPhuLuc>
+    </MaPhuLuc>
+		<MaDinhDanh>02GTTT_51</MaDinhDanh>
+		<TenToKhai>Hoa don ban hang A5 có Mã nhận hóa đơn</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>02GTTT_A5MN.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>02GTTT_80</MaToKhai>
+		<MaPhuLuc>
+    </MaPhuLuc>
+		<MaDinhDanh>02GTTT_80</MaDinhDanh>
+		<TenToKhai>Hoa don ban hang Bill 80</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>02GTTT_B80.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>02GTTT_58</MaToKhai>
+		<MaPhuLuc>
+    </MaPhuLuc>
+		<MaDinhDanh>02GTTT_58</MaDinhDanh>
+		<TenToKhai>Hoa don ban hang Bill 58</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>02GTTT_B58.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>03XKNB_1</MaToKhai>
+		<MaPhuLuc>
+    </MaPhuLuc>
+		<MaDinhDanh>03XKNB_1</MaDinhDanh>
+		<TenToKhai>Xuat kho noi bo</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>03XKNB_A4.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>04HGDL_1</MaToKhai>
+		<MaPhuLuc>
+    </MaPhuLuc>
+		<MaDinhDanh>04HGDL_1</MaDinhDanh>
+		<TenToKhai>Gui ban dai ly</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>04HGDL_A4.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>06HDXK_1</MaToKhai>
+		<MaPhuLuc>
+    </MaPhuLuc>
+		<MaDinhDanh>06HDXK_1</MaDinhDanh>
+		<TenToKhai>Hoa don xuat khau</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>06HDXK_A4.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>07KPTQ_1</MaToKhai>
+		<MaPhuLuc>
+    </MaPhuLuc>
+		<MaDinhDanh>07KPTQ_1</MaDinhDanh>
+		<TenToKhai>Hoa don khu phi thue quan</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>07KPTQ_A4.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>BBTH</MaToKhai>
+		<MaPhuLuc>
+    </MaPhuLuc>
+		<MaDinhDanh>BBTH</MaDinhDanh>
+		<TenToKhai>Bien ban thu hoi</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>BienBanHD_Thuhoi.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>BBDC</MaToKhai>
+		<MaPhuLuc>
+    </MaPhuLuc>
+		<MaDinhDanh>BBDC</MaDinhDanh>
+		<TenToKhai>Bien ban dieu chinh</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>BienBanHD_Dieuchinh.xsl</StyleSheet>
+		<Version>100</Version>
+	</Record>
+	<Record>
+		<MaToKhai>01GTKT_41VNPT</MaToKhai>
+		<MaDinhDanh>01GTKT_41VNPT</MaDinhDanh>
+		<TenToKhai>Hoa don GTGT - In A4 có Mã nhận hóa đơn</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>01GTKT_A4VNPT.xslt</StyleSheet>
+		<Version>100</Version>
+	</Record>
+  <Record>
+    <MaToKhai>BCHD_QDPHHD</MaToKhai>
+    <MaPhuLuc>
+    </MaPhuLuc>
+    <MaDinhDanh>BCHD_QDPHHD</MaDinhDanh>
+    <TenToKhai>Quyet dinh phat hanh hoa don</TenToKhai>
+    <ElementName>CTieuTKhaiChinh</ElementName>
+    <StyleSheet>BCHD_QDPHHD.xslt</StyleSheet>
+    <Version>100</Version>
+  </Record>
+  <Record>
+    <MaToKhai>BCHD_TB01_TT32</MaToKhai>
+    <MaPhuLuc>
+    </MaPhuLuc>
+    <MaDinhDanh>BCHD_TB01_TT32</MaDinhDanh>
+    <TenToKhai>Thong bao phat hanh</TenToKhai>
+    <ElementName>CTieuTKhaiChinh</ElementName>
+    <StyleSheet>BCHD_TB01_TT32.xslt</StyleSheet>
+    <Version>100</Version>
+  </Record>
+</Records>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>Hệ thống quản lý Hóa đơn điện tử</display-name>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/config/applicationContext.xml
+		    , /WEB-INF/config/springSecurityStandard.xml
+		    </param-value>
+	</context-param>
+	
+	<listener>
+		<listener-class>ts24.com.vn.web.util.Path</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!-- <context-param>
+		<param-name>log4jConfigLocation</param-sname>
+		<param-value>/WEB-INF/log4j.xml</param-value>
+	</context-param> -->
+	<!-- <listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener> -->
+
+
+	<servlet>
+		<servlet-name>springDispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>
+			    /WEB-INF/config/applicationContext.xml
+			    </param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>springDispatcher</servlet-name>
+		<url-pattern>*.bv</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Spring security -->
+	<filter>
+		<filter-name>localizationFilter</filter-name>
+		<filter-class>org.springframework.web.filter.RequestContextFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>localizationFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>  
+	    <filter-name>encodingFilter</filter-name>  
+	    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>  
+	    <init-param>  
+	       <param-name>encoding</param-name>  
+	       <param-value>UTF-8</param-value>  
+	    </init-param>  
+	    <init-param>  
+	       <param-name>forceEncoding</param-name>  
+	       <param-value>true</param-value>  
+	    </init-param>  
+	</filter>  
+	<filter-mapping>  
+	    <filter-name>encodingFilter</filter-name>  
+	    <url-pattern>/*</url-pattern>  
+	</filter-mapping> 
+
+ 	<jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <page-encoding>UTF-8</page-encoding>
+        </jsp-property-group>
+    </jsp-config>
+    
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>	
+	<!--  -->
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+	<welcome-file-list>
+		<!-- <welcome-file>login.bv</welcome-file> -->
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<error-page>
+        <exception-type>org.springframework.web.HttpSessionRequiredException</exception-type>
+       <!--  <location>/login.bv</location> -->
+        <location>/index.jsp</location>
+    </error-page>
+	
+</web-app>

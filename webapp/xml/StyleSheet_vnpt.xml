@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2013 sp1 (http://www.altova.com) by ﻿Trọng Lú (VN) -->
+<Records>
+	<Record>
+    <MaToKhai>01GTKT_41VNPT</MaToKhai>
+    <MaDinhDanh>01GTKT_41VNPT</MaDinhDanh>
+    <TenToKhai>Hoa don GTGT - In A4 có Mã nhận hóa đơn</TenToKhai>
+    <ElementName>CTieuTKhaiChinh</ElementName>
+    <StyleSheet>01GTKT_A4VNPT.xslt</StyleSheet>
+    <Version>100</Version>
+  </Record>
+  <Record>
+		<MaToKhai>01GTKT_42VNPT</MaToKhai>
+		<MaPhuLuc>01_GTKT_DT_VNPT_A4_M3_v1.0.1.xslt</MaPhuLuc>
+		<MaDinhDanh>01GTKT_42VNPT</MaDinhDanh>
+		<TenToKhai>Hoa don GTGT - In A4 có Mã nhận hóa đơn</TenToKhai>
+		<ElementName>CTieuTKhaiChinh</ElementName>
+		<StyleSheet>01GTKT_A42VNPT.xslt</StyleSheet>
+		<Version>100</Version>
+	</Record>
+</Records>
