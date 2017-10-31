@@ -18,51 +18,39 @@
 		document.loginData.username.focus();
 	}
 </script>
-<body onLoad="beginLoadForm();">
-	<spring:form id="loginData" name="loginData" action="${CONTEXT_PATH}/login.bv" commandName="loginView" method='POST'>
-       <div class="message-row" align="center">
-			<c:if test="${ not empty errorMessage }">
-			  <p class="error">${errorMessage}</p>
-			</c:if>
-		</div>
-		<table width="100%" cellspacing="0" cellpadding="3" border="0" class="txt_1 captcha">
-				<tr>
-					<td colspan="3"></td>
-				</tr>
-				<tr>
-					<td width="40%" valign="middle" align="right" class="input_form">Tên đăng nhập:</td>
-					<td valign="middle" width="15%"><input class="textinput" type="text" name="username" id="username"></td>
-					<td><spring:errors path="username" cssClass="error"/></td>
-				</tr>
-				<tr>
-					<td valign="middle" align="right" class="input_form">Mật khẩu:</td>
-					<td><input class="textinput" type="password" name="password" id="password"></td>
-					<td><spring:errors path="password" cssClass="error"/></td>
-				</tr>
-				<tr>
-					<td valign="top" align="right" class="input_form">Mã xác nhận:</td>
-					<td colspan="2">
-						<div class="g-recaptcha" data-sitekey="${GOOGLE_CAPTCHA_PUBLICKEY}"></div>
-						<%-- <div style="float: left;">
-							<%
-					          ReCaptcha c = ReCaptchaFactory.newReCaptcha(Path.TS24_GOOGLE_CAPTCHA_PUBLICKEY, Path.TS24_GOOGLE_CAPTCHA_PRIVATEKEY, false);
-					          out.print(c.createRecaptchaHtml(null, null));
-					        %>
-					  </div> --%>
-		              <c:if test="${ not empty errorMessageCaptcha }"> 
-		              	<div style="float: left;" class="error"><c:out value="${errorMessageCaptcha}"></c:out></div> 
-		              </c:if>
-                	</td>
-				</tr>
-				<tr>
-					<td class="input_form">&nbsp;</td>
-					<td valign="middle" align="left">
-							<input class="formButton" value="Đăng nhập" type="submit" onClick="form.submit();this.disabled=true;document.body.style.cursor = 'wait'; this.className='formButton-disabled';" />
-							<input type="hidden" name="j_character_encoding" value="UTF-8">
-											
-					</td>
-				</tr>
-		</table>
-	</spring:form>
+<body class="bg-dark">
+  <div class="container">
+    <div class="card card-login mx-auto mt-5">
+      <div class="card-header">Login</div>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox"> Remember Password</label>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-block" href="index.html">Login</a>
+        </form>
+        <div class="text-center">
+          <a class="d-block small mt-3" href="register.html">Register an Account</a>
+          <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 </body>
 </html>
