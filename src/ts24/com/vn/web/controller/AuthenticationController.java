@@ -63,7 +63,7 @@ public class AuthenticationController {
 	@RequestMapping(value="/login.bv", method=RequestMethod.GET)
 	public ModelAndView login(){
 		ModelAndView mv = new ModelAndView("login");
-		mv.addObject("GOOGLE_CAPTCHA_PUBLICKEY", Path.GOOGLE_CAPTCHA_PUBLICKEY);
+//		mv.addObject("GOOGLE_CAPTCHA_PUBLICKEY", Path.GOOGLE_CAPTCHA_PUBLICKEY);
 		return mv;
 	}
 	@RequestMapping(value="/logoff.bv", method=RequestMethod.GET)
@@ -84,7 +84,7 @@ public class AuthenticationController {
 				session.invalidate();
 			}
 			/** Begin captcha version 2**/
-			String gRecaptchaResponse = req.getParameter("g-recaptcha-response");
+			/*String gRecaptchaResponse = req.getParameter("g-recaptcha-response");
 			boolean verify = VerifyRecaptcha.verify(gRecaptchaResponse);
 			if(!verify){
 				ModelAndView mv = new ModelAndView("login");
@@ -92,7 +92,7 @@ public class AuthenticationController {
 				mv.addObject("GOOGLE_CAPTCHA_PUBLICKEY", Path.GOOGLE_CAPTCHA_PUBLICKEY);
 				mv.addObject("errorMessageCaptcha", message);
 				return mv;
-			}
+			}*/
 			/** End captcha version 2**/
 			
 			LoginValidator validator = new LoginValidator();
@@ -105,7 +105,7 @@ public class AuthenticationController {
 				if (user == null){
 					ModelAndView mv = new ModelAndView("login");
 					message = getMessage("error.username.password");
-					mv.addObject("GOOGLE_CAPTCHA_PUBLICKEY", Path.GOOGLE_CAPTCHA_PUBLICKEY);
+//					mv.addObject("GOOGLE_CAPTCHA_PUBLICKEY", Path.GOOGLE_CAPTCHA_PUBLICKEY);
 					mv.addObject("errorMessage", message);
 					return mv;
 				}else{
@@ -129,7 +129,7 @@ public class AuthenticationController {
 		} catch (Exception e) {
 			e.printStackTrace();
 			ModelAndView mv = new ModelAndView("login");
-			mv.addObject("GOOGLE_CAPTCHA_PUBLICKEY", Path.GOOGLE_CAPTCHA_PUBLICKEY);
+//			mv.addObject("GOOGLE_CAPTCHA_PUBLICKEY", Path.GOOGLE_CAPTCHA_PUBLICKEY);
 			mv.addObject("errorMessage", e.getMessage());
 			return mv;
 		}

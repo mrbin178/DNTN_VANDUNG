@@ -51,7 +51,7 @@
     <!-- /Change list category -->
     
     <definition name="home" extends="layoutWithBreadcrumb">
-        <put-attribute name="title" value="Hệ thống quản lý hóa đơn" />
+        <put-attribute name="title" value="Hệ thống quản lý kho" />
         <put-attribute name="pageContent" value="/WEB-INF/view/home.jsp" />
     </definition>
     
@@ -71,9 +71,13 @@
         <put-attribute name="pageContent" value="/WEB-INF/view/tracuu/searchInvoice.jsp" />
     </definition>
     
-    <definition name="login" extends="layoutWithBreadcrumb">
+    <!-- <definition name="login" extends="layoutWithBreadcrumb">
         <put-attribute name="title" value="Đăng nhập" />
         <put-attribute name="pageContent" value="/WEB-INF/view/login.jsp" />
+    </definition> -->
+    <definition name="login" template="/WEB-INF/view/login.jsp">
+    	<put-attribute name="title" value="Đăng nhập" />
+    	<put-attribute name="footerLayout" value="/WEB-INF/view/layout/footerLayout.jsp" />
     </definition>
     <!-- Invoice template -->
     
