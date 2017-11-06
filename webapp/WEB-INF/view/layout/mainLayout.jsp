@@ -1,4 +1,3 @@
-<%@page import="ts24.com.vn.dal.model.LoginAdmin"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="tile" uri="/WEB-INF/tld/tiles-jsp.tld"%>
@@ -39,6 +38,12 @@
 	var ADMIN_CALL_SERVICES_CONTEXT_PATH = '${ADMIN_CALL_SERVICES_CONTEXT_PATH}';
 	var SEARCH_RECEIPT_CONTEXT_PATH = '${SEARCH_RECEIPT_CONTEXT_PATH}';
 </script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
 <!-- Bootstrap core CSS-->
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom fonts for this template-->

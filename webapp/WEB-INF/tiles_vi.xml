@@ -70,15 +70,23 @@
         <put-attribute name="title" value="Tra cứu hóa đơn" />
         <put-attribute name="pageContent" value="/WEB-INF/view/tracuu/searchInvoice.jsp" />
     </definition>
-    
-    <!-- <definition name="login" extends="layoutWithBreadcrumb">
-        <put-attribute name="title" value="Đăng nhập" />
-        <put-attribute name="pageContent" value="/WEB-INF/view/login.jsp" />
-    </definition> -->
+    <!-- Login template -->
     <definition name="login" template="/WEB-INF/view/login.jsp">
     	<put-attribute name="title" value="Đăng nhập" />
     	<put-attribute name="footerLayout" value="/WEB-INF/view/layout/footerLayout.jsp" />
     </definition>
+    <!-- Login template -->
+    
+    <!-- Product template -->
+    
+    <definition name="danhsach_sanpham" template="/WEB-INF/view/login.jsp">
+    	<put-attribute name="title" value="Danh sách sản phẩm" />
+    	<put-attribute name="pageContent" value="/WEB-INF/view/sanpham/danhsach_sanpham.jsp" />
+    </definition>
+    
+    <!-- Product template -->
+    
+    
     <!-- Invoice template -->
     
     <definition name="hoadondientu_view" extends="layoutWithBreadcrumb">

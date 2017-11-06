@@ -24,24 +24,17 @@
 		<property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
 		
 		<!-- Mapping -->
-		<mapping class="ts24.com.vn.dal.model.LoginAdmin" />
-		<mapping class="ts24.com.vn.dal.model.NhomQuyen" />
-		<mapping class="ts24.com.vn.dal.model.Quyen" />
-		<mapping class="ts24.com.vn.dal.model.UserRule" />
-		<mapping class="ts24.com.vn.dal.model.ThongTinCongTy" />
-		<mapping class="ts24.com.vn.dal.model.CoQuanThue" />
-		<mapping class="ts24.com.vn.dal.model.HoaDon" />
-		<mapping class="ts24.com.vn.dal.model.HoaDonChiTiet" />
-		<mapping class="ts24.com.vn.dal.model.HddtGioihanHienthi" />
-		<mapping class="ts24.com.vn.dal.model.HddtTracuu" />
-		<mapping class="ts24.com.vn.dal.model.Phieuthu" />
-		<mapping class="ts24.com.vn.dal.model.PhieuthuChitiet" />
-		<mapping class="ts24.com.vn.dal.model.PhieuthuCongty" />
-		<mapping class="ts24.com.vn.dal.model.PhieuthuDmuc" />
-		<mapping class="ts24.com.vn.dal.model.PhieuthuNhomquyen" />
-		<mapping class="ts24.com.vn.dal.model.PhieuthuQuyen" />
-		<mapping class="ts24.com.vn.dal.model.PhieuthuUser" />
-		<mapping class="ts24.com.vn.dal.model.PhieuthuUserRule" />
+		<mapping class="satthepvandung.dal.table.LoginAdmin" />
+		<mapping class="satthepvandung.dal.table.NhomQuyen" />
+		<mapping class="satthepvandung.dal.table.Quyen" />
+		<mapping class="satthepvandung.dal.table.UserRule" />
+		<mapping class="satthepvandung.dal.table.CoQuanThue" />
+		<mapping class="satthepvandung.dal.table.HoaDon" />
+		<mapping class="satthepvandung.dal.table.HoaDonChiTiet" />
+		<mapping class="satthepvandung.dal.table.Khachhang" />
+		<mapping class="satthepvandung.dal.table.Nhacungcap" />
+		<mapping class="satthepvandung.dal.table.Sanpham" />
+		<mapping class="satthepvandung.dal.table.Role" />
 		
 		
 	</session-factory>

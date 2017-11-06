@@ -1,4 +1,3 @@
-<%@page import="ts24.com.vn.dal.model.LoginAdmin"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="tile" uri="/WEB-INF/tld/tiles-jsp.tld" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>

@@ -19,8 +19,8 @@
 
 	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
  
-	<context:component-scan base-package="ts24.com.vn.web.controller, dummiesmind.breadcrumb.springmvc" />
-<!-- <context:component-scan base-package="ts24.com.vn.web.controller" /> -->
+	<context:component-scan base-package="satthepvandung.web.controller, dummiesmind.breadcrumb.springmvc" />
+<!-- <context:component-scan base-package="satthepvandung.web.controller" /> -->
 	<context:annotation-config />
 	<mvc:annotation-driven content-negotiation-manager="contentNegotiationManager"/>
 	<bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
@@ -31,7 +31,7 @@
 		<mvc:interceptor>
 			<mvc:mapping path="/**" />
 			<!-- <bean class="dummiesmind.breadcrumb.springmvc.interceptor.BreadCrumbInterceptor" /> --> 
-			<bean class="ts24.com.vn.web.springmvc.interceptor.BreadCrumbInterceptor" />
+			<bean class="satthepvandung.web.springmvc.interceptor.BreadCrumbInterceptor" />
 		</mvc:interceptor>
 		<bean id="localeChangeInterceptor"
 			class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">

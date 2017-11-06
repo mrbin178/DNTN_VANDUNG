@@ -23,17 +23,15 @@
 		<div class="container">
 			<div class="card card-login mx-auto mt-5">
 				<div class="card-header" align="center" style="color: red;">
-					<strong><h3>SẮT THÉP VĂN DUNG</h3></strong>
+					<strong><h3>DNTN SẮT THÉP VĂN DUNG</h3></strong>
 				</div>
 				<div class="card-body">
 					<form>
 						<div class="form-group">
-							<!-- <label for="exampleInputEmail1">Email address</label> -->
 							<input class="form-control"  name="username" id="username"
 								aria-describedby="emailHelp" placeholder="Nhập tên đăng nhập">
 						</div>
 						<div class="form-group">
-							<!-- <label for="exampleInputPassword1">Password</label> -->
 							<input class="form-control" name="password" id="password"
 								type="password" placeholder="Nhập mật khẩu">
 						</div>
