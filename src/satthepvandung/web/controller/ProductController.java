@@ -25,34 +25,27 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
-import ts24.com.vn.dal.dao.HoaDonDao;
-import ts24.com.vn.dal.dao.PhieuthuDao;
-import ts24.com.vn.dal.dao.impl.HoaDonDaoImpl;
-import ts24.com.vn.dal.dao.impl.PhieuthuDaoImpl;
-import ts24.com.vn.dal.model.Phieuthu;
-import ts24.com.vn.dal.model.ThongTinCongTy;
-import ts24.com.vn.model.InvoiceForm;
-import ts24.com.vn.model.ReceiptForm;
-import ts24.com.vn.web.common.LocaleCustomize;
-import ts24.com.vn.web.common.LocaleType;
-import ts24.com.vn.web.digisign.DigitalSignVerify;
-import ts24.com.vn.web.util.Commons;
-import ts24.com.vn.web.util.ConstantValue;
-import ts24.com.vn.web.util.FileManager;
-import ts24.com.vn.web.util.Path;
-import ts24.com.vn.web.util.ReadXMLFileUsingDom;
-import ts24.com.vn.web.util.Utilities;
+import satthepvandung.dal.dao.SanphamDAO;
+import satthepvandung.dal.dao.impl.SanphamDAOImpl;
+import satthepvandung.model.InvoiceForm;
+import satthepvandung.model.ReceiptForm;
+import satthepvandung.web.common.LocaleCustomize;
+import satthepvandung.web.common.LocaleType;
+import satthepvandung.web.util.Commons;
+import satthepvandung.web.util.ConstantValue;
+import satthepvandung.web.util.FileManager;
+import satthepvandung.web.util.Path;
+import satthepvandung.web.util.ReadXMLFileUsingDom;
+import satthepvandung.web.util.Utilities;
 
 @Controller
 @RequestMapping(value = "/sanpham")
 public class ProductController {
 	
-	private HoaDonDao hoaDonDao;
-	private PhieuthuDao phieuthuDao;
+	private SanphamDAO SanphamDAO;
 	
-	public ReceiptController(){
-		this.hoaDonDao = new HoaDonDaoImpl();
-		this.phieuthuDao = new PhieuthuDaoImpl();
+	public ProductController(){
+		this.SanphamDAO = new SanphamDAOImpl();
 	}
 	
 	@Autowired
@@ -71,7 +64,7 @@ public class ProductController {
 		binder.setIgnoreUnknownFields(true);
 	}
 	
-	@RequestMapping(value = "/searchReceipt.bv")
+	@RequestMapping(value = "/list_product.vandung")
 	public ModelAndView init(@ModelAttribute("searchReceiptForm") ReceiptForm form,
 			Model model, HttpSession session, HttpServletRequest req) {
 		String key = "";

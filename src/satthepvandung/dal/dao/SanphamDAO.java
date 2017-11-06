@@ -2,11 +2,13 @@ package satthepvandung.dal.dao;
 
 import java.util.List;
 
-import satthepvandung.dal.table.CoQuanThue;
+import satthepvandung.dal.table.Sanpham;
 
-public interface SanphamDAO extends BaseDAO<CoQuanThue>{
-	 public List<CoQuanThue> getListTinh() throws Exception;
-	 public List<CoQuanThue> getListQuanTheoTinh(String maTinh) throws Exception;
-	 public List<CoQuanThue> getListLimitTinh(String maTinh) throws Exception;
-	 public List<CoQuanThue> getListLimitQuan(String maQuan) throws Exception;
+public interface SanphamDAO extends BaseDAO<Sanpham>{
+
+	void saveProduct(Sanpham obj) throws Exception;
+
+	List<Sanpham> getAll() throws Exception;
+
+	Sanpham getById(String id) throws Exception;
 	}
