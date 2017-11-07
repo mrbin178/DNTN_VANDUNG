@@ -31,9 +31,9 @@
 		<mapping class="satthepvandung.dal.table.CoQuanThue" />
 		<mapping class="satthepvandung.dal.table.HoaDon" />
 		<mapping class="satthepvandung.dal.table.HoaDonChiTiet" />
-		<mapping class="satthepvandung.dal.table.DmKhachhang" />
-		<mapping class="satthepvandung.dal.table.DmNhacungcap" />
-		<mapping class="satthepvandung.dal.table.DmSanpham" />
+		<mapping class="satthepvandung.dal.table.Khachhang" />
+		<mapping class="satthepvandung.dal.table.Nhacungcap" />
+		<mapping class="satthepvandung.dal.table.Sanpham" />
 		<mapping class="satthepvandung.dal.table.Role" />
 		
 		
