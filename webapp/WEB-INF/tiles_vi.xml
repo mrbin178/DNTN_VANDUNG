@@ -79,7 +79,7 @@
     
     <!-- Product template -->
     
-    <definition name="danhsach_sanpham" template="/WEB-INF/view/login.jsp">
+    <definition name="danhsach_sanpham" extends="layoutWithBreadcrumb">
     	<put-attribute name="title" value="Danh sách sản phẩm" />
     	<put-attribute name="pageContent" value="/WEB-INF/view/sanpham/danhsach_sanpham.jsp" />
     </definition>
