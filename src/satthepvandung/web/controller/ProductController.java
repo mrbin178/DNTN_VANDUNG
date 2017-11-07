@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
@@ -27,8 +29,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 import satthepvandung.dal.dao.SanphamDAO;
 import satthepvandung.dal.dao.impl.SanphamDAOImpl;
+import satthepvandung.dal.table.Sanpham;
 import satthepvandung.model.InvoiceForm;
 import satthepvandung.model.ReceiptForm;
+import satthepvandung.model.SanphamForm;
 import satthepvandung.web.common.LocaleCustomize;
 import satthepvandung.web.common.LocaleType;
 import satthepvandung.web.util.Commons;
@@ -42,10 +46,10 @@ import satthepvandung.web.util.Utilities;
 @RequestMapping(value = "/sanpham")
 public class ProductController {
 	
-	private SanphamDAO SanphamDAO;
+	private SanphamDAO sanphamDAO;
 	
 	public ProductController(){
-		this.SanphamDAO = new SanphamDAOImpl();
+		this.sanphamDAO = new SanphamDAOImpl();
 	}
 	
 	@Autowired
@@ -65,128 +69,23 @@ public class ProductController {
 	}
 	
 	@RequestMapping(value = "/list_product.vandung")
-	public ModelAndView init(@ModelAttribute("searchReceiptForm") ReceiptForm form,
-			Model model, HttpSession session, HttpServletRequest req) {
-		String key = "";
-		key = "KEY";
-		if((key != null && !key.equals(""))){
-			key = key.trim();
-			if(checkAccessKey(key) != null){
-				form.setAccessKey(key);
-				model.addAttribute("searchReceiptForm", form);
-				model.addAttribute(ConstantValue.ACCESSKEY, key);
-				return new ModelAndView("search.receipt");
-			}else return new ModelAndView("access.denied");
-		}else return new ModelAndView("access.denied");
+	public ModelAndView init(Model model, HttpSession session, HttpServletRequest req) {
+		try {
+			List<Sanpham> listSp = sanphamDAO.getAll();
+			model.addAttribute("listSp", listSp);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return new ModelAndView("danhsach_sanpham");
 	}
 
-	private ThongTinCongTy checkAccessKey(String key){
-		try {
-			ThongTinCongTy obj = new ThongTinCongTy();
-			return obj;
-		} catch (Exception e) {
-			System.out.println("Caused by");
-			e.printStackTrace();
-			return null;
-		}
-	}
-	
-	@RequestMapping(value = "/searchReceipt.bv", method = RequestMethod.POST)
-	public ModelAndView listreceipt_process(@ModelAttribute("searchReceiptForm") ReceiptForm form, Model model, HttpSession session, HttpServletRequest req) {
+	@RequestMapping(value = "/add_product.vandung", method = RequestMethod.POST)
+	public ModelAndView listreceipt_process(@ModelAttribute("sanPhamForm") SanphamForm form, Model model, HttpSession session, HttpServletRequest req) {
 		String accessKey = "";
 		try {
-			String filePath = "", maTraCuu = "", soPhieuThu = "", ngayThuTien = "", status = "", keyViewBrowseFile="", mstNguoiBan = "";
-			ThongTinCongTy octy = null;
-			// set value null for condion check fileNameBrowse
-			form.setFileNameBrowse(null);
-			keyViewBrowseFile = req.getParameter("keyViewBrowseFile");
-			if(keyViewBrowseFile != null && !keyViewBrowseFile.equals("") && keyViewBrowseFile.equals("showViewBrowseFile")){
-				// process
-				String fileName_org = "";
-				String fileName = "", xmlFilePath = "";
-				boolean check_file = false;
-				String fileContent = "";
-				
-				accessKey = form.getAccessKey();
-				/** Begin upload file **/
-				MultipartHttpServletRequest multipartRequest = ( MultipartHttpServletRequest ) req;
-				/**
-				 * BEGIN UPLOAD FILE XML
-				 * **/
-				String FolderHS = Path.PATH_DOWNLOAD;
-				String destinationDir = FolderHS + ConstantValue.XHD_TEMP_PATH + ConstantValue.FOLDER_BROWSE_FILE;
-				MultipartFile file = multipartRequest.getFile( "fileHS" );
-				fileName_org = file.getOriginalFilename( );
-				/** check file extension valid **/
-				check_file = coms.checkValidFileUpload_File_XML( fileName_org );
-				if ( !check_file ){
-					model.addAttribute( "statusViewBrowseFileHD", -1 ); // file not validate
-					model.addAttribute(ConstantValue.ACCESSKEY, accessKey);
-					model.addAttribute("searchReceiptForm", form);
-//					return new ModelAndView( "error.certified.receipt" );
-					form.setFileNameBrowse(null);
-					return new ModelAndView("search.receipt");
-				}else{
-					fileName_org = fileName_org + ConstantValue.MINUS + util.randomXref_tenFile() + ConstantValue.XML_EXTEND_FILE ;
-					fileName = fileName_org;
-
-					// check path exists
-					File path = new File( destinationDir );
-					if ( !path.exists( ) ){
-						path.mkdirs( );
-					}
-					xmlFilePath = destinationDir + fileName;
-					File destination = new File( xmlFilePath );
-					file.transferTo( destination );
-					if (Utilities.checkExitsFile(xmlFilePath) == 1) {
-						
-						fileContent = FileManager.readFileToString( xmlFilePath );
-						if(fileContent.contains("inv:LoaiHDView")){
-							model.addAttribute("LoaiHDView", "1");
-						}else{
-							model.addAttribute("LoaiHDView", "0");
-						}
-						String LoaiHDView = StringUtils.substringBetween(fileContent, ConstantValue.BEGIN_NODE_LOAIHDVIEW, ConstantValue.END_NODE_LOAIHDVIEW);
-						model.addAttribute("LoaiHDView", LoaiHDView);
-						model.addAttribute(ConstantValue.ACCESSKEY, accessKey);
-						model.addAttribute("searchReceiptForm", form);
-						form.setFileNameBrowse(fileName);
-						model.addAttribute("showBtnPrintFile", "show");
-						return new ModelAndView("search.receipt");
-					}else{
-						model.addAttribute(ConstantValue.ACCESSKEY, accessKey);
-						model.addAttribute("searchReceiptForm", form);
-						form.setFileNameBrowse(null);
-						model.addAttribute( "statusViewBrowseFileHD", -99 ); // not validate data
-						return new ModelAndView("search.receipt");
-					}
-				} // end view file invoice from browse 
-			}else{
-				maTraCuu = form.getMaTraCuu();
-				if(maTraCuu != null && !maTraCuu.equals("")){
-					maTraCuu = maTraCuu.trim();
-				}else{
-					
-					soPhieuThu = form.getSoPhieuThu();
-					if(soPhieuThu != null && !soPhieuThu.equals(""))
-						soPhieuThu = soPhieuThu.trim();
-					
-					ngayThuTien = form.getNgayThuTien();
-					if(ngayThuTien != null && !ngayThuTien.equals(""))
-						ngayThuTien = Utilities.formatNgaySo4(ngayThuTien.replaceAll("/", ConstantValue.MINUS));
-					
-					mstNguoiBan = form.getMstNguoiBan();
-					if(mstNguoiBan != null && !mstNguoiBan.equals(""))
-						mstNguoiBan = mstNguoiBan.trim();
-				}
-				accessKey = form.getAccessKey();
-				
-				/** CHECK ACCESS KEY*/
-				octy = checkAccessKey(accessKey); 
-				if(octy != null){
-					return searchReceipt(form, model, accessKey, filePath, maTraCuu, soPhieuThu, ngayThuTien, status, mstNguoiBan);
-				}else return new ModelAndView("access.denied");
-			}
+			Sanpham objSave = new Sanpham();
+			BeanUtils.copyProperties(form, objSave);
+			sanphamDAO.saveProduct(objSave);
 		} catch (Exception e) {
 			System.out.println("Caused by");
 			e.printStackTrace();
