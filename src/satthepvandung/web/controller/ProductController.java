@@ -67,10 +67,20 @@ public class ProductController {
 		}
 		return new ModelAndView("danhsach_sanpham");
 	}
+	
+	@RequestMapping(value = "/insert_product.vandung")
+	public ModelAndView insert_product(@ModelAttribute("sanPhamForm") SanphamForm form, Model model, HttpSession session, HttpServletRequest req) {
+//		try {
+//			
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+		model.addAttribute("sanPhamForm", form);
+		return new ModelAndView("insert_sanpham");
+	}
 
 	@RequestMapping(value = "/insert_product.vandung", method = RequestMethod.POST)
-	public ModelAndView insert_product(@ModelAttribute("sanPhamForm") SanphamForm form, Model model, HttpSession session, HttpServletRequest req) {
-		String accessKey = "";
+	public ModelAndView insert_product_process(@ModelAttribute("sanPhamForm") SanphamForm form, Model model, HttpSession session, HttpServletRequest req) {
 		try {
 			Sanpham objSave = new Sanpham();
 			BeanUtils.copyProperties(form, objSave);
@@ -79,12 +89,10 @@ public class ProductController {
 				model.addAttribute("statusSave", 1);
 			}
 		} catch (Exception e) {
-			System.out.println("Caused by");
 			e.printStackTrace();
-			model.addAttribute(ConstantValue.ACCESSKEY, accessKey);
-			model.addAttribute("searchReceiptForm", form);
+			model.addAttribute("sanPhamForm", form);
 		}
-		return new ModelAndView("search.receipt");
+		return new ModelAndView("insert_sanpham");
 	}
 
 	@RequestMapping(value = "/update_product.vandung", method = RequestMethod.POST)

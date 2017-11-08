@@ -26,6 +26,8 @@ public class Sanpham implements Serializable {
 	private String ngayUpdate;
 	private String donViTinh;
 	private String tonKho;
+	private String nguoiTao;
+	private String nguoiCapNhat;
 
 	@Id	
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -127,6 +129,26 @@ public class Sanpham implements Serializable {
 
 	public void setTonKho(String tonKho) {
 		this.tonKho = tonKho;
+	}
+
+	@Column(name = "NguoiTao")
+	@JsonProperty("NguoiTao")
+	public String getNguoiTao() {
+		return nguoiTao;
+	}
+
+	public void setNguoiTao(String nguoiTao) {
+		this.nguoiTao = nguoiTao;
+	}
+
+	@Column(name = "NguoiCapNhat")
+	@JsonProperty("NguoiCapNhat")
+	public String getNguoiCapNhat() {
+		return nguoiCapNhat;
+	}
+
+	public void setNguoiCapNhat(String nguoiCapNhat) {
+		this.nguoiCapNhat = nguoiCapNhat;
 	}
 
 }

@@ -10,7 +10,7 @@
 	<table width="100%">
 		<tr>
 			<td align="left"><i class="fa fa-table"></i> Danh mục sản phẩm</td>
-			<td align="right"><a class="btn btn-primary" href="#" id="">Thêm mới <i class="fa fa-plus"></i></a></td>
+			<td align="right"><a class="btn btn-primary" href="${PRODUCT_CONTEXT_PATH}/insert_product.vandung" id="">Thêm mới <i class="fa fa-plus"></i></a></td>
 		</tr>
 	</table>
 	</div>
@@ -28,7 +28,7 @@
 						<th></th>
 					</tr>
 				</thead>
-				<tfoot>
+				<!-- <tfoot>
 					<tr>
 						<th>Mã sản phẩm</th>
 						<th>Tên sản phẩm</th>
@@ -38,7 +38,7 @@
 						<th>Tồn kho</th>
 						<th></th>
 					</tr>
-				</tfoot>
+				</tfoot> -->
 				<tbody>
 					<c:if test="${ not empty listSp && listSp != '' }">
 						<c:forEach items="${listSp}" var="item">
@@ -48,7 +48,7 @@
 								<td align="right"><c:out value="${item.giaBan}"></c:out></td>
 								<td align="right"><c:out value="${item.giaVon}"></c:out></td>
 								<td><c:out value="${item.donViTinh}"></c:out></td>
-								<td></td>
+								<td><c:out value="${item.tonKho}"></c:out></td>
 								<td>
 									<a title="Chỉnh sửa" href="#"><i class="fa fa-pencil-square-o"></i></a>
 									<a title="Xóa" href="#"><i class="fa fa-trash-o"></i></a>

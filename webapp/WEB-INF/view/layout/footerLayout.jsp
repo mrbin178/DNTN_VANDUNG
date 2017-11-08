@@ -9,7 +9,7 @@
 <footer class="sticky-footer">
 	<div class="container">
 		<div class="text-center">
-			<small>Copyright © DNTN sắt thép Văn Dung 2017</small>
+			<small>Copyright © DNTN Sắt thép Văn Dung 2017</small>
 		</div>
 	</div>
 </footer>

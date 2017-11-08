@@ -30,32 +30,16 @@ public class SanphamDAOImpl extends BaseDAOImpl<Sanpham> implements SanphamDAO {
 		return 1;
 	}
 
-//	@Override
-//	@SuppressWarnings("unchecked")
-//	public List<Sanpham> getAll() throws Exception {
-//		Session session = null;
-//		try {
-//			session = sessionFactory.openSession();
-//			Query query = session.createQuery("FROM Sanpham WHERE trangThai=:1");
-//			List<Sanpham> listSP = query.list();
-//			if (listSP != null && listSP.size() > 0) {
-//				return listSP;
-//			}
-//		} finally {
-//			closeSession(session);
-//		}
-//		return null;
-//	}
-	
+	@SuppressWarnings("unchecked")
 	public List<Sanpham> getAll() throws Exception {
 		Session session = null;
 		
 		try{
 			session = sessionFactory.openSession();
-			Query query = session.createQuery("FROM Sanpham WHERE trangThai=1 ");
-			List<Sanpham> users = query.list();
-			if (users != null && users.size() > 0){
-				return users;
+			Query query = session.createQuery("FROM Sanpham WHERE trangThai IN ('1','2') ORDER BY ngayTao ASC");
+			List<Sanpham> listSP = query.list();
+			if (listSP != null && listSP.size() > 0){
+				return listSP;
 			}
 		}finally{
 			closeSession(session);
@@ -69,7 +53,7 @@ public class SanphamDAOImpl extends BaseDAOImpl<Sanpham> implements SanphamDAO {
 		Session session = null;
 		try {
 			session = sessionFactory.openSession();
-			Query query = session.createQuery("FROM Sanpham where id=:id AND trangThai=:1 ORDER BY ngayTao DESC");
+			Query query = session.createQuery("FROM Sanpham where id=:id AND trangThai IN ('1','2') ORDER BY ngayTao ASC");
 			query.setParameter("id", Integer.parseInt(id));
 			List<Sanpham> listSP = query.list();
 			if (listSP != null && listSP.size() > 0) {

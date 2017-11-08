@@ -11463,6 +11463,7 @@
 			 *    } );
 			 */
 			"sInfoFiltered": "(filtered from _MAX_ total entries)",
+			"sInfoFiltered": "(Lọc từ _MAX_ mục)",
 	
 	
 			/**

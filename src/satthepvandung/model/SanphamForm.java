@@ -12,6 +12,8 @@ public class SanphamForm
 	private String ngayUpdate;
 	private String donViTinh;
 	private String tonKho;
+	private String nguoiTao;
+	private String nguoiCapNhat;
 	
 	public int getId() {
 		return id;
@@ -72,6 +74,18 @@ public class SanphamForm
 	}
 	public void setTonKho(String tonKho) {
 		this.tonKho = tonKho;
+	}
+	public String getNguoiTao() {
+		return nguoiTao;
+	}
+	public void setNguoiTao(String nguoiTao) {
+		this.nguoiTao = nguoiTao;
+	}
+	public String getNguoiCapNhat() {
+		return nguoiCapNhat;
+	}
+	public void setNguoiCapNhat(String nguoiCapNhat) {
+		this.nguoiCapNhat = nguoiCapNhat;
 	}
 	
 }

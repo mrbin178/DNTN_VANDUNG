@@ -53,7 +53,17 @@
     
     <definition name="danhsach_sanpham" extends="layoutWithBreadcrumb">
         <put-attribute name="title" value="Danh sách sản phẩm" />
-        <put-attribute name="pageContent" value="/WEB-INF/view/sanpham/danhsach_sanpham.jsp" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/sanpham/list_sanpham.jsp" />
+    </definition>
+    
+    <definition name="insert_sanpham" extends="layoutWithBreadcrumb">
+        <put-attribute name="title" value="Thêm mới sản phẩm" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/sanpham/insert_sanpham.jsp" />
+    </definition>
+    
+    <definition name="update_sanpham" extends="layoutWithBreadcrumb">
+        <put-attribute name="title" value="Chỉnh sửa sản phẩm" />
+        <put-attribute name="pageContent" value="/WEB-INF/view/sanpham/update_sanpham.jsp" />
     </definition>
     
     <!-- Product template -->
