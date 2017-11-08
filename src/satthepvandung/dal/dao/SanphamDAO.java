@@ -6,7 +6,7 @@ import satthepvandung.dal.table.Sanpham;
 
 public interface SanphamDAO extends BaseDAO<Sanpham>{
 
-	void saveProduct(Sanpham obj) throws Exception;
+	int saveProduct(Sanpham obj) throws Exception;
 
 	List<Sanpham> getAll() throws Exception;
 

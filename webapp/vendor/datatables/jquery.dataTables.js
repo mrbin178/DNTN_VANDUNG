@@ -1737,7 +1737,8 @@
 		 * sZeroRecords - assuming that is given.
 		 */
 		if ( ! lang.sEmptyTable && zeroRecords &&
-			defaults.sEmptyTable === "No data available in table" )
+//			defaults.sEmptyTable === "No data available in table" )
+			defaults.sEmptyTable === "Không tìm thấy dữ liệu" )
 		{
 			_fnMap( lang, lang, 'sZeroRecords', 'sEmptyTable' );
 		}
@@ -11383,7 +11384,8 @@
 			 *      } );
 			 *    } );
 			 */
-			"sEmptyTable": "No data available in table",
+//			"sEmptyTable": "No data available in table",
+			"sEmptyTable": "Không tìm thấy dữ liệu",
 	
 	
 			/**
@@ -11415,7 +11417,8 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+//			"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+			"sInfo": "Hiển thị _START_ đến _END_ của _TOTAL_ mục",
 	
 	
 			/**
@@ -11436,7 +11439,8 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoEmpty": "Showing 0 to 0 of 0 entries",
+//			"sInfoEmpty": "Showing 0 to 0 of 0 entries",
+			"sInfoEmpty": "Hiển thị 0 đến 0 của 0 mục",
 	
 	
 			/**
@@ -11576,7 +11580,8 @@
 			 *      } );
 			 *    } );
 			 */
-			"sLengthMenu": "Show _MENU_ entries",
+//			"sLengthMenu": "Show _MENU_ entries",
+			"sLengthMenu": "Hiển thị _MENU_ mục",
 	
 	
 			/**
@@ -11656,7 +11661,8 @@
 			 *      } );
 			 *    } );
 			 */
-			"sSearch": "Search:",
+//			"sSearch": "Search:",
+			"sSearch": "Tìm kiếm:",
 	
 	
 			/**

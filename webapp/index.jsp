@@ -2,5 +2,5 @@
 
 <%-- Redirected because we can't set the welcome page to a virtual URL. --%>
 <script type="text/javascript">
-	window.location = '<c:url value="login.bv"/>';
+	window.location = '<c:url value="login.vandung"/>';
 </script>

@@ -62,19 +62,19 @@ public class AuthenticationController {
 		return messageSource.getMessage(code, null, LocaleCustomize.getLocale(LocaleType.VI_VN.getLocaleKey()));
 	}
     
-	@RequestMapping(value="/login.bv", method=RequestMethod.GET)
+	@RequestMapping(value="/login.vandung", method=RequestMethod.GET)
 	public ModelAndView login(){
 		ModelAndView mv = new ModelAndView("login");
 //		mv.addObject("GOOGLE_CAPTCHA_PUBLICKEY", Path.GOOGLE_CAPTCHA_PUBLICKEY);
 		return mv;
 	}
-	@RequestMapping(value="/logoff.bv", method=RequestMethod.GET)
+	@RequestMapping(value="/logoff.vandung", method=RequestMethod.GET)
 	public String logoff(){
 		return "logoff";
 	}
 	
 	@SuppressWarnings("static-access")
-	@RequestMapping(value="/login.bv", method=RequestMethod.POST)
+	@RequestMapping(value="/login.vandung", method=RequestMethod.POST)
 	public ModelAndView login(@ModelAttribute("loginView") @Validated LoginView loginView, BindingResult bindingResult,
 			 String username, String password, HttpSession session, HttpServletRequest req, HttpServletResponse res){
 		String message = "";
@@ -123,7 +123,7 @@ public class AuthenticationController {
 					webSession.setListRule(listRule);
 					session = req.getSession(true);
 					session.setAttribute(SessionConst.WEB_SESSION, webSession);
-					return new ModelAndView("redirect:home.bv");
+					return new ModelAndView("redirect:home.vandung");
 				}
 			}else{
 				return login();

@@ -3,7 +3,7 @@
 	xmlns="http://java.sun.com/xml/ns/javaee"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	version="3.0">
-	<display-name>Hệ thống quản lý Hóa đơn điện tử</display-name>
+	<display-name>Hệ thống quản lý DNTN Sắt thép Văn Dung</display-name>
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
@@ -43,7 +43,7 @@
 
 	<servlet-mapping>
 		<servlet-name>springDispatcher</servlet-name>
-		<url-pattern>*.bv</url-pattern>
+		<url-pattern>*.vandung</url-pattern>
 	</servlet-mapping>
 	
 	<!-- Spring security -->

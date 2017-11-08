@@ -2,7 +2,6 @@ package satthepvandung.dal.table;
 
 import java.io.Serializable;
 
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +16,7 @@ import org.codehaus.jackson.annotate.JsonProperty;
 @SuppressWarnings("serial")
 public class Sanpham implements Serializable {
 
-	private String id;
+	private int id;
 	private String giaBan;
 	private String giaVon;
 	private String maSanPham;
@@ -25,21 +24,21 @@ public class Sanpham implements Serializable {
 	private int trangThai;
 	private String ngayTao;
 	private String ngayUpdate;
+	private String donViTinh;
+	private String tonKho;
 
-	@Basic
 	@Id	
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="ID")
 	@JsonProperty("ID")
-	public String getId() {
+	public int getId() {
 		return this.id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	
-	@Basic
 	@Column(name = "GiaBan")
 	@JsonProperty("GiaBan")
 	public String getGiaBan() {
@@ -50,7 +49,6 @@ public class Sanpham implements Serializable {
 		this.giaBan = giaBan;
 	}
 
-	@Basic
 	@Column(name = "GiaVon")
 	@JsonProperty("GiaVon")
 	public String getGiaVon() {
@@ -61,7 +59,6 @@ public class Sanpham implements Serializable {
 		this.giaVon = giaVon;
 	}
 
-	@Basic
 	@Column(name = "MaSanPham")
 	@JsonProperty("MaSanPham")
 	public String getMaSanPham() {
@@ -72,7 +69,6 @@ public class Sanpham implements Serializable {
 		this.maSanPham = maSanPham;
 	}
 
-	@Basic
 	@Column(name = "TenSanPham")
 	@JsonProperty("TenSanPham")
 	public String getTenSanPham() {
@@ -83,7 +79,6 @@ public class Sanpham implements Serializable {
 		this.tenSanPham = tenSanPham;
 	}
 
-	@Basic
 	@Column(name = "TrangThai")
 	@JsonProperty("TrangThai")
 	public int getTrangThai() {
@@ -94,7 +89,6 @@ public class Sanpham implements Serializable {
 		this.trangThai = trangThai;
 	}
 
-	@Basic
 	@Column(name = "NgayTao")
 	@JsonProperty("NgayTao")
 	public String getNgayTao() {
@@ -105,7 +99,6 @@ public class Sanpham implements Serializable {
 		this.ngayTao = ngayTao;
 	}
 
-	@Basic
 	@Column(name = "NgayUpdate")
 	@JsonProperty("NgayUpdate")
 	public String getNgayUpdate() {
@@ -114,6 +107,26 @@ public class Sanpham implements Serializable {
 
 	public void setNgayUpdate(String ngayUpdate) {
 		this.ngayUpdate = ngayUpdate;
+	}
+
+	@Column(name = "DonViTinh")
+	@JsonProperty("DonViTinh")
+	public String getDonViTinh() {
+		return donViTinh;
+	}
+
+	public void setDonViTinh(String donViTinh) {
+		this.donViTinh = donViTinh;
+	}
+
+	@Column(name = "TonKho")
+	@JsonProperty("TonKho")
+	public String getTonKho() {
+		return tonKho;
+	}
+
+	public void setTonKho(String tonKho) {
+		this.tonKho = tonKho;
 	}
 
 }

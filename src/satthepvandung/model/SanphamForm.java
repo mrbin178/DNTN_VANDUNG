@@ -2,7 +2,7 @@ package satthepvandung.model;
 
 public class SanphamForm
 {
-	private String id;
+	private int id;
 	private String giaBan;
 	private String giaVon;
 	private String maSanPham;
@@ -10,11 +10,13 @@ public class SanphamForm
 	private int trangThai;
 	private String ngayTao;
 	private String ngayUpdate;
+	private String donViTinh;
+	private String tonKho;
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getGiaBan() {
@@ -58,6 +60,18 @@ public class SanphamForm
 	}
 	public void setNgayUpdate(String ngayUpdate) {
 		this.ngayUpdate = ngayUpdate;
+	}
+	public String getDonViTinh() {
+		return donViTinh;
+	}
+	public void setDonViTinh(String donViTinh) {
+		this.donViTinh = donViTinh;
+	}
+	public String getTonKho() {
+		return tonKho;
+	}
+	public void setTonKho(String tonKho) {
+		this.tonKho = tonKho;
 	}
 	
 }

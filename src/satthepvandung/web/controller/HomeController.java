@@ -19,7 +19,7 @@ import dummiesmind.breadcrumb.springmvc.annotations.Link;
 @SessionAttributes({SessionConst.WEB_SESSION})
 public class HomeController {
 	@Link(label=BreadCrumbConst.HOME, family=BreadCrumbConst.MAIN_FLOW, parent="")
-	@RequestMapping(value = "/home.bv", method = RequestMethod.GET)
+	@RequestMapping(value = "/home.vandung", method = RequestMethod.GET)
 	public ModelAndView homeView(HttpSession session){
 		try {
 			ModelAndView view = new ModelAndView("home");

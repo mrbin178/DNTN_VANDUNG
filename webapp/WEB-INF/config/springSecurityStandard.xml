@@ -25,7 +25,7 @@
 		<!-- <sec:intercept-url pattern="/home**" access="hasAnyRole('Group_Admin','Group_User')"/> -->
 		<!-- <sec:form-login login-page="/login.htm" always-use-default-target="true" default-target-url="/home.htm" authentication-failure-url="/login.htm?error=Invalid username or password..." /> -->
 		<!-- <sec:form-login login-page="/login.htm" always-use-default-target="true" default-target-url="/searchInvoice.htm" authentication-failure-url="/login.htm?error=Invalid username or password..." /> -->
-		<sec:logout delete-cookies="JSESSIONID,SMSESSION" logout-success-url="/login.bv" invalidate-session="true" logout-url="/j_spring_security_logout"/>
+		<sec:logout delete-cookies="JSESSIONID,SMSESSION" logout-success-url="/login.vandung" invalidate-session="true" logout-url="/j_spring_security_logout"/>
 	</sec:http> 
 	<sec:authentication-manager>
 	  <sec:authentication-provider>

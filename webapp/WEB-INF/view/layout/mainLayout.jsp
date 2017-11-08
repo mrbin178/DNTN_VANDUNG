@@ -26,8 +26,8 @@
 <c:set var="ADMIN_CALL_SERVICES_CONTEXT_PATH"
 	value="${pageContext.request.contextPath}/admincallservices"
 	scope="session" />
-<c:set var="SEARCH_RECEIPT_CONTEXT_PATH"
-	value="${pageContext.request.contextPath}/receipt" scope="session" />
+<c:set var="PRODUCT_CONTEXT_PATH"
+	value="${pageContext.request.contextPath}/sanpham" scope="session" />
 <script>
 	var CONTEXT_PATH = '${CONTEXT_PATH}';
 	var BREADCRUMB_CONTEXT_PATH = '${BREADCRUMB_CONTEXT_PATH}';
@@ -36,24 +36,18 @@
 	var SEARCHINVOICE_CONTEXT_PATH = '${SEARCHINVOICE_CONTEXT_PATH}';
 	var REPORT_CONTEXT_PATH = '${REPORT_CONTEXT_PATH}';
 	var ADMIN_CALL_SERVICES_CONTEXT_PATH = '${ADMIN_CALL_SERVICES_CONTEXT_PATH}';
-	var SEARCH_RECEIPT_CONTEXT_PATH = '${SEARCH_RECEIPT_CONTEXT_PATH}';
+	var PRODUCT_CONTEXT_PATH = '${PRODUCT_CONTEXT_PATH}';
 </script>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<!-- Bootstrap core CSS-->
-<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<!-- Custom fonts for this template-->
-<link href="vendor/font-awesome/css/font-awesome.min.css"
-	rel="stylesheet" type="text/css">
-<!-- Page level plugin CSS-->
-<link href="vendor/datatables/dataTables.bootstrap4.css"
-	rel="stylesheet">
-<!-- Custom styles for this template-->
-<link href="css/sb-admin.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="<c:url value="/vendor/bootstrap/css/bootstrap.min.css"/>">
+<link rel="stylesheet" type="text/css" href="<c:url value="/vendor/font-awesome/css/font-awesome.min.css"/>">
+<link rel="stylesheet" type="text/css" href="<c:url value="/vendor/datatables/dataTables.bootstrap4.css"/>">
+<link rel="stylesheet" type="text/css" href="<c:url value="/css/sb-admin.css"/>">
+
 </head>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
 	<tile:insertAttribute name="headerLayout"></tile:insertAttribute>
@@ -88,20 +82,18 @@
 				</div>
 			</div>
 		</div>
+		
 		<!-- Bootstrap core JavaScript-->
-		<script src="vendor/jquery/jquery.min.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<!-- Core plugin JavaScript-->
-		<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-		<!-- Page level plugin JavaScript-->
-		<script src="vendor/chart.js/Chart.min.js"></script>
-		<script src="vendor/datatables/jquery.dataTables.js"></script>
-		<script src="vendor/datatables/dataTables.bootstrap4.js"></script>
-		<!-- Custom scripts for all pages-->
-		<script src="js/sb-admin.min.js"></script>
-		<!-- Custom scripts for this page-->
-		<script src="js/sb-admin-datatables.min.js"></script>
-		<script src="js/sb-admin-charts.min.js"></script>
+		<script src="<c:url value="/vendor/jquery/jquery.min.js"/>"></script>
+		<script src="<c:url value="/vendor/bootstrap/js/bootstrap.bundle.min.js"/>"></script>
+		<script src="<c:url value="/vendor/jquery-easing/jquery.easing.min.js"/>"></script>
+		<script src="<c:url value="/vendor/chart.js/Chart.min.js"/>"></script>
+		<script src="<c:url value="/vendor/datatables/jquery.dataTables.js"/>"></script>
+		<script src="<c:url value="/vendor/datatables/dataTables.bootstrap4.js"/>"></script>
+		<script src="<c:url value="/js/sb-admin.min.js"/>"></script>
+		<script src="<c:url value="/js/sb-admin-datatables.min.js"/>"></script>
+		<script src="<c:url value="/js/sb-admin-charts.min.js"/>"></script>
+		
 	</div>
 </body>
 </html>

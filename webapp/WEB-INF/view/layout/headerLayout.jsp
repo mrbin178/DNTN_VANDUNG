@@ -40,7 +40,7 @@
 					class="fa fa-fw fa-cubes"></i> <span class="nav-link-text">Quản lý sản phẩm</span>
 			</a>
 				<ul class="sidenav-second-level collapse" id="collapseSanPham">
-					<li><a href="#"><i class="fa fa-fw fa-cube"></i> Sản phẩm</a></li>
+					<li><a href="${PRODUCT_CONTEXT_PATH}/list_product.vandung"><i class="fa fa-fw fa-cube"></i> Sản phẩm</a></li>
 				</ul>
 			</li>
 			<li class="nav-item" data-toggle="tooltip" data-placement="right"

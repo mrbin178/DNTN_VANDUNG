@@ -18,7 +18,7 @@
 
 <body class="bg-dark">
 	<spring:form id="loginData" name="loginData"
-		action="${pageContext.request.contextPath}/login.bv" commandName="loginView"
+		action="${pageContext.request.contextPath}/login.vandung" commandName="loginView"
 		method='POST'>
 		<div class="container">
 			<div class="card card-login mx-auto mt-5">
